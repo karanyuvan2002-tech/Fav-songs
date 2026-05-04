@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+    <style>
+        body { background: #121212; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: sans-serif; }
+        .play-btn { 
+            background: #1DB954; color: white; border: none; 
+            padding: 20px 50px; font-size: 24px; border-radius: 50px; 
+            cursor: pointer; box-shadow: 0 0 20px rgba(29, 185, 84, 0.4);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <audio id="song" src="song.mp3"></audio>
+    <button class="play-btn" onclick="playMusic()">▶ CLICK TO PLAY SONG</button>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("song");
+            audio.play();
+            document.querySelector('.play-btn').innerText = "🎵 PLAYING...";
+        }
+    </script>
+</body>
+</html>
